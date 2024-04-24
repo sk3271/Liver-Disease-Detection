@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <title>LIVER DISEASE DETECTION</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="container-heading">
+        <span class="heading_font">LIVER DISEASE DETECTIONS</span>
+      </h2>
+    </div>
+    <div class="ml-container">
+      <form action="{{url_for("predict")}}" method="POST">
+        <br>
+        <h3> Age</h3>
+        <input id="first" name="Age" type="number" min="0" max="100" placeholder="years(0-100)" required>
+        <br>
+        <h3> Gender</h3>
+        <input id="second" name="Gender" placeholder="o or 1" required="required">
+        <br>
+        <h3> Total Bilirubin</h3>
+        <input id="third" name="Total_Bilirubin" max="6" placeholder="(0.0-6.0)" required="required">
+        <br>
+        <h3> Alkaline Phosphotase</h3>
+        <input id="fourth" name="Alkaline_Phosphotase" max="500" placeholder="(0-500)" required="required">
+        <br>
+        <h3> Alamine Aminotransferase</h3>
+        <input id="fifth" name="Alamine_Aminotransferase" max="120" placeholder="(0-120)" required="required">
+        <br>
+        <h3> Aspartate Aminotransferase</h3>
+        <input id="sixth" name="Aspartate_Aminotransferase" max="200" placeholder="(0-200)" required="rquired">
+        <br>
+        <h3>Total Protiens</h3>
+        <input id="seventh" name="Total_Protiens" max="10" placeholder="(0.0-10.0)" required="required">
+        <br>
+        <h3>Albumin</h3>
+        <input id="eight" name="Albumin" max="6" placeholder="(0.0-6.0)" required="required">
+        <br>
+        <h3>Albumin and Globulin Ratio</h3>
+        <input id="ninth" name="Albumin_and_Globulin_Ratio" max="2" placeholder="(0.0-2.0)" required="required">
+        <br>
+        <br>
+        <br>
+        <button id="sub" type="submit"> Submit</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="footer-description">©2024 Shankar Kumawat</p>
+      </form>
+    </div>
+  </body>
+</html>
